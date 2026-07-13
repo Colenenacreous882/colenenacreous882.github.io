@@ -589,64 +589,64 @@ body.theme-dark .sidebar-divider {
 }
 
 /* ========================================
-   Research — Clean Cards with Subtle Divider
+   Research Page — Color Block Accents
    ======================================== */
 
-.research-card {
-    background: var(--card-bg, #fafbfc);
-    border-radius: 8px;
-    padding: 0 1.5rem;
+/* --- 每个研究项目卡片 --- */
+.research-item {
+    background: var(--research-bg, #f8f9fa);
+    padding: 1.2rem 1.5rem 0.8rem 1.5rem;
     margin-bottom: 1.8rem;
+    border-radius: 8px;  /* 改为四角都圆 */
     transition: background 0.3s ease;
 }
 
-.research-card:hover {
-    background: var(--card-bg-hover, #f5f6f8);
+.research-item:hover {
+    background: var(--research-bg-hover, #f0f2f5);
 }
 
-.research-card-body {
-    padding: 1.2rem 0 1.2rem 0;
+/* --- Upcoming 项目特殊样式 --- */
+.research-upcoming {
+    background: var(--research-bg-upcoming, #fcf9f0);
 }
 
-.research-divider {
-    border: none;
-    border-top: 1px solid var(--divider-color, #e0e4e8);
-    margin: 0.2rem 0 0.6rem 0;
-    transition: border-color 0.3s ease;
+.research-upcoming:hover {
+    background: var(--research-bg-upcoming-hover, #f8f2e0);
 }
 
-.research-head {
+/* --- 头部：标签 + 状态 --- */
+.research-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 0.3rem;
     gap: 0.5rem;
-    margin-bottom: 0.1rem;
 }
 
 .research-tag {
     display: inline-block;
+    background: var(--tag-bg, #b8860b);
+    color: var(--tag-text, #ffffff);
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.4px;
-    padding: 0.1rem 0.7rem;
+    letter-spacing: 0.5px;
+    padding: 0.15rem 0.7rem;
     border-radius: 3px;
-    background: var(--tag-bg-light, #f0e8d8);
-    color: var(--tag-color, #b8860b);
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 .research-status {
     display: inline-block;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.4px;
-    padding: 0.1rem 0.6rem;
-    border-radius: 12px;
-    background: var(--status-bg-light, #e8ecf0);
-    color: var(--status-color, #5a5a5a);
+    letter-spacing: 0.5px;
+    padding: 0.15rem 0.7rem;
+    border-radius: 3px;
+    background: var(--status-bg, #e8ecf0);
+    color: var(--status-text, #4a4a4a);
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -655,18 +655,7 @@ body.theme-dark .sidebar-divider {
     color: var(--status-upcoming-text, #ffffff);
 }
 
-.research-card h3 {
-    font-size: 1.1rem;
-    margin: 0.2rem 0 0 0;
-    color: var(--title-color, #2d2d2d);
-}
-
-.research-card h4 {
-    font-size: 1rem;
-    margin: 0.8rem 0 0.2rem 0;
-    color: var(--title-color, #2d2d2d);
-}
-
+/* --- 元信息 --- */
 .research-meta {
     font-size: 0.92rem;
     color: var(--meta-text, #5a5a5a);
@@ -675,93 +664,135 @@ body.theme-dark .sidebar-divider {
 }
 
 .research-supervisor {
-    color: var(--supervisor-color, #b8860b);
+    color: var(--supervisor-text, #b8860b);
     font-weight: 500;
 }
 
 .research-period {
-    color: var(--period-color, #7a7a7a);
+    color: var(--period-text, #7a7a7a);
     font-size: 0.85rem;
 }
 
-.research-card ul {
-    margin: 0.3rem 0 0 1.2rem;
-    color: var(--desc-color, #3d3d3d);
+/* --- Future Directions Grid --- */
+.future-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0 0.5rem 0;
 }
 
-.research-card li {
-    margin-bottom: 0.3rem;
-    line-height: 1.6;
+@media (max-width: 700px) {
+    .future-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.research-card p {
-    color: var(--desc-color, #3d3d3d);
+.future-item {
+    background: var(--future-bg, #f8f9fa);
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
 }
 
-/* Upcoming 卡片特殊样式（仅背景微调） */
-.research-upcoming {
-    background: var(--upcoming-bg, #fcf9f0);
+.future-item:hover {
+    background: var(--future-bg-hover, #f0f2f5);
 }
 
-.research-upcoming:hover {
-    background: var(--upcoming-bg-hover, #f8f2e0);
+.future-bar {
+    width: 32px;
+    height: 3px;
+    background: var(--future-bar, #b8860b);
+    margin-bottom: 0.4rem;
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+.future-item h4 {
+    font-size: 1rem;
+    margin: 0 0 0.2rem 0;
+    color: var(--future-title, #2d2d2d);
+}
+
+.future-item p {
+    font-size: 0.9rem;
+    color: var(--future-text, #5a5a5a);
+    margin: 0;
 }
 
 /* ========================================
-   Research — Theme Variables
+   Theme Variables (同步系统色系)
    ======================================== */
 
+/* 默认主题 (棕黄) */
 :root {
-    --card-bg: #fafbfc;
-    --card-bg-hover: #f5f6f8;
-    --divider-color: #e0e4e8;
-    --tag-bg-light: #f0e8d8;
-    --tag-color: #b8860b;
-    --status-bg-light: #e8ecf0;
-    --status-color: #5a5a5a;
+    --research-bg: #f8f9fa;
+    --research-bg-hover: #f0f2f5;
+    --research-border: #b8860b;
+    --research-bg-upcoming: #fcf9f0;
+    --research-bg-upcoming-hover: #f8f2e0;
+    --research-border-upcoming: #e8a838;
+    --tag-bg: #b8860b;
+    --tag-text: #ffffff;
+    --status-bg: #e8ecf0;
+    --status-text: #4a4a4a;
     --status-upcoming-bg: #e8a838;
     --status-upcoming-text: #ffffff;
-    --title-color: #2d2d2d;
     --meta-text: #5a5a5a;
-    --supervisor-color: #b8860b;
-    --period-color: #7a7a7a;
-    --desc-color: #3d3d3d;
-    --upcoming-bg: #fcf9f0;
-    --upcoming-bg-hover: #f8f2e0;
+    --supervisor-text: #b8860b;
+    --period-text: #7a7a7a;
+    --future-bg: #f8f9fa;
+    --future-bg-hover: #f0f2f5;
+    --future-bar: #b8860b;
+    --future-title: #2d2d2d;
+    --future-text: #5a5a5a;
 }
 
+/* 绿色主题 */
 body.theme-green {
-    --card-bg: #f6faf8;
-    --card-bg-hover: #edf4f0;
-    --divider-color: #c8e0d4;
-    --tag-bg-light: #dcece2;
-    --tag-color: #2d8f5c;
-    --status-bg-light: #d8ece2;
-    --status-color: #3a5a4a;
+    --research-bg: #f0f8f4;
+    --research-bg-hover: #e4f0ea;
+    --research-border: #2d8f5c;
+    --research-bg-upcoming: #f2faf5;
+    --research-bg-upcoming-hover: #e6f4ec;
+    --research-border-upcoming: #4aad7a;
+    --tag-bg: #2d8f5c;
+    --tag-text: #ffffff;
+    --status-bg: #d8ece2;
+    --status-text: #3a5a4a;
     --status-upcoming-bg: #4aad7a;
     --status-upcoming-text: #ffffff;
-    --supervisor-color: #2d8f5c;
-    --upcoming-bg: #f2faf5;
-    --upcoming-bg-hover: #e6f4ec;
+    --meta-text: #4a6a5a;
+    --supervisor-text: #2d8f5c;
+    --period-text: #6a8a7a;
+    --future-bg: #f0f8f4;
+    --future-bg-hover: #e4f0ea;
+    --future-bar: #2d8f5c;
+    --future-title: #1e3a2e;
+    --future-text: #4a6a5a;
 }
 
+/* 深色主题 */
 body.theme-dark {
-    --card-bg: #161b22;
-    --card-bg-hover: #1c2333;
-    --divider-color: #30363d;
-    --tag-bg-light: #1c2a3a;
-    --tag-color: #58a6ff;
-    --status-bg-light: #21262d;
-    --status-color: #b0b8c0;
+    --research-bg: #161b22;
+    --research-bg-hover: #1c2333;
+    --research-border: #58a6ff;
+    --research-bg-upcoming: #1a2030;
+    --research-bg-upcoming-hover: #222a40;
+    --research-border-upcoming: #79c0ff;
+    --tag-bg: #58a6ff;
+    --tag-text: #0d1117;
+    --status-bg: #21262d;
+    --status-text: #b0b8c0;
     --status-upcoming-bg: #58a6ff;
     --status-upcoming-text: #0d1117;
-    --title-color: #f0f6fc;
     --meta-text: #b0b8c0;
-    --supervisor-color: #58a6ff;
-    --period-color: #8b949e;
-    --desc-color: #c9d1d9;
-    --upcoming-bg: #1a2030;
-    --upcoming-bg-hover: #222a40;
+    --supervisor-text: #58a6ff;
+    --period-text: #8b949e;
+    --future-bg: #161b22;
+    --future-bg-hover: #1c2333;
+    --future-bar: #58a6ff;
+    --future-title: #f0f6fc;
+    --future-text: #b0b8c0;
 }
 
 /* ========================================
