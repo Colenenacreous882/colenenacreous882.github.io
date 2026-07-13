@@ -16,12 +16,12 @@ body {
     font-size: 1.1rem;
     line-height: 1.8;
     background-color: #ffffff;
-    color: #2d2d2d;  /* 深灰，非纯黑 */
+    color: #2d2d2d;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 a {
-    color: #b8860b;  /* 棕黄亮色 */
+    color: #b8860b;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -39,7 +39,7 @@ a:hover {
    2. Header（顶部导航）
    ======================================== */
 .site-header {
-    background-color: #f8f9fa;  /* 浅灰偏蓝 */
+    background-color: #f8f9fa;
     border-bottom: 2px solid #e8ecf0;
     padding: 0.8rem 2rem;
     position: sticky;
@@ -96,7 +96,6 @@ a:hover {
     border-bottom-color: #b8860b;
 }
 
-/* 主题切换按钮 */
 .theme-btn {
     background: none;
     border: 1.5px solid #d0d5db;
@@ -135,7 +134,7 @@ a:hover {
    ======================================== */
 .sidebar {
     flex: 0 0 240px;
-    background-color: #f8f9fa;  /* 浅灰偏蓝 */
+    background-color: #f8f9fa;
     padding: 1.8rem 1.2rem;
     border-radius: 12px;
     text-align: center;
@@ -243,7 +242,8 @@ a:hover {
     margin-bottom: 0.8rem;
     color: #3a3a3a;
 }
-.page-content ul, .page-content ol {
+.page-content ul,
+.page-content ol {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
     color: #3a3a3a;
@@ -253,24 +253,29 @@ a:hover {
 }
 
 /* 论文/项目卡片 */
-.pub-item, .project-item {
+.pub-item,
+.project-item {
     margin-bottom: 1.2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #e8ecf0;
 }
-.pub-item:last-child, .project-item:last-child {
+.pub-item:last-child,
+.project-item:last-child {
     border-bottom: none;
 }
-.pub-title, .project-title {
+.pub-title,
+.project-title {
     font-weight: 600;
     font-size: 1.05rem;
     color: #2d2d2d;
 }
-.pub-meta, .project-meta {
+.pub-meta,
+.project-meta {
     color: #5a5a5a;
     font-size: 0.92rem;
 }
-.pub-links a, .project-links a {
+.pub-links a,
+.project-links a {
     display: inline-block;
     background-color: #e8ecf0;
     padding: 0.1rem 0.7rem;
@@ -280,7 +285,8 @@ a:hover {
     color: #4a4a4a;
     transition: all 0.3s ease;
 }
-.pub-links a:hover, .project-links a:hover {
+.pub-links a:hover,
+.project-links a:hover {
     background-color: #b8860b;
     color: #ffffff;
 }
@@ -589,15 +595,14 @@ body.theme-dark .sidebar-divider {
 }
 
 /* ========================================
-   Research Page — Color Block Accents
+   9. Research Page — Clean Cards
    ======================================== */
 
-/* --- 每个研究项目卡片 --- */
 .research-item {
     background: var(--research-bg, #f8f9fa);
     padding: 1.2rem 1.5rem 0.8rem 1.5rem;
     margin-bottom: 1.8rem;
-    border-radius: 8px;  /* 改为四角都圆 */
+    border-radius: 8px;
     transition: background 0.3s ease;
 }
 
@@ -605,7 +610,6 @@ body.theme-dark .sidebar-divider {
     background: var(--research-bg-hover, #f0f2f5);
 }
 
-/* --- Upcoming 项目特殊样式 --- */
 .research-upcoming {
     background: var(--research-bg-upcoming, #fcf9f0);
 }
@@ -614,7 +618,6 @@ body.theme-dark .sidebar-divider {
     background: var(--research-bg-upcoming-hover, #f8f2e0);
 }
 
-/* --- 头部：标签 + 状态 --- */
 .research-header {
     display: flex;
     justify-content: space-between;
@@ -655,7 +658,6 @@ body.theme-dark .sidebar-divider {
     color: var(--status-upcoming-text, #ffffff);
 }
 
-/* --- 元信息 --- */
 .research-meta {
     font-size: 0.92rem;
     color: var(--meta-text, #5a5a5a);
@@ -720,83 +722,7 @@ body.theme-dark .sidebar-divider {
 }
 
 /* ========================================
-   Theme Variables (同步系统色系)
-   ======================================== */
-
-/* 默认主题 (棕黄) */
-:root {
-    --research-bg: #f8f9fa;
-    --research-bg-hover: #f0f2f5;
-    --research-border: #b8860b;
-    --research-bg-upcoming: #fcf9f0;
-    --research-bg-upcoming-hover: #f8f2e0;
-    --research-border-upcoming: #e8a838;
-    --tag-bg: #b8860b;
-    --tag-text: #ffffff;
-    --status-bg: #e8ecf0;
-    --status-text: #4a4a4a;
-    --status-upcoming-bg: #e8a838;
-    --status-upcoming-text: #ffffff;
-    --meta-text: #5a5a5a;
-    --supervisor-text: #b8860b;
-    --period-text: #7a7a7a;
-    --future-bg: #f8f9fa;
-    --future-bg-hover: #f0f2f5;
-    --future-bar: #b8860b;
-    --future-title: #2d2d2d;
-    --future-text: #5a5a5a;
-}
-
-/* 绿色主题 */
-body.theme-green {
-    --research-bg: #f0f8f4;
-    --research-bg-hover: #e4f0ea;
-    --research-border: #2d8f5c;
-    --research-bg-upcoming: #f2faf5;
-    --research-bg-upcoming-hover: #e6f4ec;
-    --research-border-upcoming: #4aad7a;
-    --tag-bg: #2d8f5c;
-    --tag-text: #ffffff;
-    --status-bg: #d8ece2;
-    --status-text: #3a5a4a;
-    --status-upcoming-bg: #4aad7a;
-    --status-upcoming-text: #ffffff;
-    --meta-text: #4a6a5a;
-    --supervisor-text: #2d8f5c;
-    --period-text: #6a8a7a;
-    --future-bg: #f0f8f4;
-    --future-bg-hover: #e4f0ea;
-    --future-bar: #2d8f5c;
-    --future-title: #1e3a2e;
-    --future-text: #4a6a5a;
-}
-
-/* 深色主题 */
-body.theme-dark {
-    --research-bg: #161b22;
-    --research-bg-hover: #1c2333;
-    --research-border: #58a6ff;
-    --research-bg-upcoming: #1a2030;
-    --research-bg-upcoming-hover: #222a40;
-    --research-border-upcoming: #79c0ff;
-    --tag-bg: #58a6ff;
-    --tag-text: #0d1117;
-    --status-bg: #21262d;
-    --status-text: #b0b8c0;
-    --status-upcoming-bg: #58a6ff;
-    --status-upcoming-text: #0d1117;
-    --meta-text: #b0b8c0;
-    --supervisor-text: #58a6ff;
-    --period-text: #8b949e;
-    --future-bg: #161b22;
-    --future-bg-hover: #1c2333;
-    --future-bar: #58a6ff;
-    --future-title: #f0f6fc;
-    --future-text: #b0b8c0;
-}
-
-/* ========================================
-   Publications — Status Badges
+   10. Publications — Status Badges
    ======================================== */
 
 .pub-status {
@@ -811,14 +737,6 @@ body.theme-dark {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* 默认主题 (棕黄) */
-:root {
-    --status-accepted-bg: #b8860b;
-    --status-accepted-text: #ffffff;
-    --status-review-bg: #e8a838;
-    --status-review-text: #ffffff;
-}
-
 .status-accepted {
     background: var(--status-accepted-bg, #b8860b);
     color: var(--status-accepted-text, #ffffff);
@@ -829,25 +747,8 @@ body.theme-dark {
     color: var(--status-review-text, #ffffff);
 }
 
-/* 绿色主题 */
-body.theme-green {
-    --status-accepted-bg: #2d8f5c;
-    --status-accepted-text: #ffffff;
-    --status-review-bg: #4aad7a;
-    --status-review-text: #ffffff;
-}
-
-/* 深色主题 */
-body.theme-dark {
-    --status-accepted-bg: #58a6ff;
-    --status-accepted-text: #0d1117;
-    --status-review-bg: #79c0ff;
-    --status-review-text: #0d1117;
-}
-
-
 /* ========================================
-   Projects — Clean Cards with Subtle Divider
+   11. Projects — Clean Cards with Subtle Divider
    ======================================== */
 
 .project-card {
@@ -866,7 +767,6 @@ body.theme-dark {
     padding: 1.2rem 0 1.2rem 0;
 }
 
-/* 标题下方极细分隔线 — 唯一点缀 */
 .project-divider {
     border: none;
     border-top: 1px solid var(--divider-color, #e0e4e8);
@@ -883,7 +783,6 @@ body.theme-dark {
     margin-bottom: 0.1rem;
 }
 
-/* 标签 — 浅色背景 + 彩色文字 */
 .project-tag {
     display: inline-block;
     font-size: 0.7rem;
@@ -960,8 +859,39 @@ body.theme-dark {
     color: var(--link-text-hover, #ffffff);
 }
 
-/* Theme Variables */
+/* ========================================
+   12. Theme Variables (统一管理所有变量)
+   ======================================== */
+
+/* 默认主题 (棕黄) */
 :root {
+    /* Research */
+    --research-bg: #f8f9fa;
+    --research-bg-hover: #f0f2f5;
+    --research-bg-upcoming: #fcf9f0;
+    --research-bg-upcoming-hover: #f8f2e0;
+    --tag-bg: #b8860b;
+    --tag-text: #ffffff;
+    --status-bg: #e8ecf0;
+    --status-text: #4a4a4a;
+    --status-upcoming-bg: #e8a838;
+    --status-upcoming-text: #ffffff;
+    --meta-text: #5a5a5a;
+    --supervisor-text: #b8860b;
+    --period-text: #7a7a7a;
+    --future-bg: #f8f9fa;
+    --future-bg-hover: #f0f2f5;
+    --future-bar: #b8860b;
+    --future-title: #2d2d2d;
+    --future-text: #5a5a5a;
+
+    /* Publications */
+    --status-accepted-bg: #b8860b;
+    --status-accepted-text: #ffffff;
+    --status-review-bg: #e8a838;
+    --status-review-text: #ffffff;
+
+    /* Projects */
     --card-bg: #fafbfc;
     --card-bg-hover: #f5f6f8;
     --divider-color: #e0e4e8;
@@ -980,7 +910,35 @@ body.theme-dark {
     --link-text-hover: #ffffff;
 }
 
+/* ----- 绿色主题变量覆盖 ----- */
 body.theme-green {
+    /* Research */
+    --research-bg: #f0f8f4;
+    --research-bg-hover: #e4f0ea;
+    --research-bg-upcoming: #f2faf5;
+    --research-bg-upcoming-hover: #e6f4ec;
+    --tag-bg: #2d8f5c;
+    --tag-text: #ffffff;
+    --status-bg: #d8ece2;
+    --status-text: #3a5a4a;
+    --status-upcoming-bg: #4aad7a;
+    --status-upcoming-text: #ffffff;
+    --meta-text: #4a6a5a;
+    --supervisor-text: #2d8f5c;
+    --period-text: #6a8a7a;
+    --future-bg: #f0f8f4;
+    --future-bg-hover: #e4f0ea;
+    --future-bar: #2d8f5c;
+    --future-title: #1e3a2e;
+    --future-text: #4a6a5a;
+
+    /* Publications */
+    --status-accepted-bg: #2d8f5c;
+    --status-accepted-text: #ffffff;
+    --status-review-bg: #4aad7a;
+    --status-review-text: #ffffff;
+
+    /* Projects */
     --card-bg: #f6faf8;
     --card-bg-hover: #edf4f0;
     --divider-color: #c8e0d4;
@@ -988,10 +946,46 @@ body.theme-green {
     --tag-color: #2d8f5c;
     --status-bg-light: #d8ece2;
     --status-color: #3a5a4a;
+    --title-color: #1e3a2e;
+    --role-color: #4a6a5a;
+    --desc-color: #2a4a3a;
+    --meta-color: #4a6a5a;
+    --label-color: #3a5a4a;
+    --link-bg: #d8ece2;
+    --link-color: #3a5a4a;
     --link-bg-hover: #2d8f5c;
+    --link-text-hover: #ffffff;
 }
 
+/* ----- 深色主题变量覆盖 ----- */
 body.theme-dark {
+    /* Research */
+    --research-bg: #161b22;
+    --research-bg-hover: #1c2333;
+    --research-bg-upcoming: #1a2030;
+    --research-bg-upcoming-hover: #222a40;
+    --tag-bg: #58a6ff;
+    --tag-text: #0d1117;
+    --status-bg: #21262d;
+    --status-text: #b0b8c0;
+    --status-upcoming-bg: #58a6ff;
+    --status-upcoming-text: #0d1117;
+    --meta-text: #b0b8c0;
+    --supervisor-text: #58a6ff;
+    --period-text: #8b949e;
+    --future-bg: #161b22;
+    --future-bg-hover: #1c2333;
+    --future-bar: #58a6ff;
+    --future-title: #f0f6fc;
+    --future-text: #b0b8c0;
+
+    /* Publications */
+    --status-accepted-bg: #58a6ff;
+    --status-accepted-text: #0d1117;
+    --status-review-bg: #79c0ff;
+    --status-review-text: #0d1117;
+
+    /* Projects */
     --card-bg: #161b22;
     --card-bg-hover: #1c2333;
     --divider-color: #30363d;
