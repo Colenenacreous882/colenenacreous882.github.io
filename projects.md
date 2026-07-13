@@ -55,7 +55,7 @@ permalink: /projects/
   <div class="project-card-body">
     <div class="project-head">
       <span class="project-tag">Research · Documentation</span>
-      <span class="project-status">Ongoing</span>
+      <span class="project-status">Active</span>
     </div>
     <h3>Independent Research Portfolio</h3>
     <p class="project-role">Mathematical Foundations, AI, and Quantitative Research</p>
@@ -67,8 +67,8 @@ permalink: /projects/
       <span style="font-weight:600;">Notebook</span> — working notes, reviews, and research ideas
     </div>
     <div class="project-links">
-      <a href="https://shorturl.at/VREdG" target="_blank">Notion Knowledge Base →</a>
-      <a href="{{ '/notebook' | relative_url }}">Working Notebook →</a>
+      <a href="https://shorturl.at/VREdG" target="_blank">Notion Knowledge Base</a>
+      <a href="{{ '/notebook' | relative_url }}">Working Notebook</a>
     </div>
   </div>
 </div>
